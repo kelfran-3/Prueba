@@ -1,0 +1,115 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+//en esta carpeta se colocan las clases css para el sistema
+//.h-screen {
+
+//	height: 100vh;
+//}
+
+#title{
+
+color:white;
+
+}
+
+ body{
+background-color:white; 
+
+ }
+ #na{
+
+  color:white;
+
+ }
+
+ #na:hover{
+
+
+background-color:#0B488E;
+
+color:white; }
+
+  ul, ol {
+
+    list-style:none;
+
+
+  }  
+
+  #nav li a:hover{
+    background-color:white; 
+    color:#38b2ac;
+
+  }
+
+  #nav > li{
+
+    float:left;
+
+  }
+
+  #nav li ul {
+
+   display:none;
+   position:absolute;
+   min-width: 140px;
+  }
+
+  #nav li:hover > ul{
+       
+
+       display:block;
+
+
+  }
+
+
+
+ .odd td{
+
+  background: #eee;
+
+    }     
+    
+
+table {
+   width: 100%;
+   text-align: left;
+   border-collapse: collapse;
+   margin: 0 0 1em 0;
+   caption-side: top;
+}
+ td, th {
+  
+  padding: 0.3em;
+   border-bottom: 1px solid #999;
+
+
+  
+}
+tbody {
+   border-bottom: 1px solid #000;
+}
+tbody th, tfoot th {
+   border: 0;
+}
+
+tfoot {
+   text-align: center;
+   color: #555;
+   font-size: 0.8em;
+}
+
+
+
+
+    
+    

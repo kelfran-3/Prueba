@@ -1,0 +1,116 @@
+
+@extends('layout')
+
+@section('title', 'operacions')
+
+@section('subtitle') 
+
+
+
+<div class="container">
+
+     <div class="d-flex justify-content-between aling-items-center mb-3">
+	       <h1   class="display-4 mb-0">@lang('Operations')</h1>
+
+	     <a class="btn btn-primary" href="{{route('operacions.create')}}">
+
+            @lang('Include New Guie')
+       </a>
+ 
+
+
+
+     </div>
+
+
+
+
+     <p class="lead text-secondary"> Operaciones del transporte</p>
+
+        <ul class="list-group">
+          <li class=" border-0 mb-0 ">
+            <div  class="d-flex text-secondary justify-content-between aling-items-center" >
+           
+              <h3>
+                 <span class="text-black-50">Numero de Guia</span>
+              </h3>
+            
+               <h3>
+                 <span class="text-black-50"> Status</span>
+               </h3>
+
+            </div>
+          </li>
+        </ul>
+
+ <ul class="list-group">
+
+
+
+	 @forelse($operacions as $operacion)
+
+		  <li class="list-group-item border-0 mb-3 shadow-sm">
+
+            
+ 
+          <a  class="d-flex text-secondary justify-content-between aling-items-center" 
+
+			         href="{{route('operacions.edit',$operacion)}}" >
+              
+                 <span class=" font-weight-bold">  
+
+                 
+                 <td> <input   type="checkbox"   name="checks_{{$operacion->id}}" id="{{route('operacions.destroy',$operacion)}}" onclick="mostra(this.name);">
+
+                     </td>
+
+                     {{$operacion->guia}}
+                 </span>
+
+                 <span class="text-black-50">{{$operacion->status}}</span>
+
+			    </a> 
+
+
+	   </li> 
+             @empty
+
+       <li class="list-group-item border-0 mb.3 shadow-sm"> 
+             
+             No hay ningun elemento
+       
+       </li>
+
+
+	     @endforelse
+
+ </ul>
+
+
+ </div>
+
+
+
+      
+
+
+   </form>
+
+
+
+
+
+
+
+ @endsection 
+
+<script type="text/javascript" >
+  
+
+
+
+</script>
+
+ 
+
+
